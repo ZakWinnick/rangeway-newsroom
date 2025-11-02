@@ -1,0 +1,41 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title }} - All Content</title>
+    <description>{{ site.description }}</description>
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+
+    {% assign all_content = "" | split: "" %}
+    {% assign all_content = all_content | concat: site.press_releases %}
+    {% assign all_content = all_content | concat: site.case_studies %}
+    {% assign all_content = all_content | concat: site.posts %}
+    {% assign sorted_content = all_content | sort: 'date' | reverse %}
+
+    {% for item in sorted_content limit:20 %}
+    <item>
+      <title>{{ item.title | xml_escape }}</title>
+      <description>{{ item.excerpt | strip_html | xml_escape }}</description>
+      <link>{{ site.url }}{{ item.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ item.url }}</guid>
+      <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
+      {% if item.collection == 'press_releases' %}
+      <category>Press Release</category>
+      {% elsif item.collection == 'case_studies' %}
+      <category>Case Study</category>
+      {% elsif item.collection == 'posts' %}
+      <category>Blog</category>
+      {% endif %}
+      {% if item.author %}
+      <author>{{ item.author | xml_escape }}</author>
+      {% endif %}
+    </item>
+    {% endfor %}
+
+  </channel>
+</rss>
