@@ -82,6 +82,44 @@ title: Rangeway Energy Newsroom
     </div>
 </section>
 
+<!-- Recent Case Studies -->
+{% if site.case_studies.size > 0 %}
+<section class="difference-section">
+    <div class="container">
+        <div class="section-header-modern">
+            <span class="section-badge">Case Studies</span>
+            <h2>In-Depth Insights</h2>
+            <p>Data-driven stories and analysis</p>
+        </div>
+
+        <div class="difference-grid">
+            {% assign counter = 0 %}
+            {% for study in site.case_studies reversed %}
+                {% if counter < 3 %}
+                <div class="difference-card">
+                    <h3>{{ study.title }}</h3>
+                    {% if study.subtitle %}
+                    <p style="color: var(--fog-gray); margin-top: 0.5rem; font-size: 0.95rem;">{{ study.subtitle }}</p>
+                    {% endif %}
+                    <p style="margin-top: 1rem;">{{ study.excerpt | strip_html | truncatewords: 30 }}</p>
+                    <a href="{{ study.url | relative_url }}" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
+                        Read case study <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                {% assign counter = counter | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="{{ '/case-studies/' | relative_url }}" class="btn-primary-modern">
+                View All Case Studies
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
 <!-- Recent Blog Posts -->
 {% if site.posts.size > 0 %}
 <section>
