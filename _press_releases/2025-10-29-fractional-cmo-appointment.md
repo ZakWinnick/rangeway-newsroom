@@ -5,7 +5,7 @@ date: 2025-10-29
 description: "European eMobility marketing expert joins to build brand foundation for California launch and US expansion"
 ---
 
-![Rangeway Energy and Nexxt Industry partnership announcement](/assets/images/nexxtannouncement.jpg)
+<img src="/assets/images/nexxtannouncement.jpg" alt="Rangeway Energy and Nexxt Industry partnership announcement" style="max-width: 100%; height: auto; border-radius: var(--radius-md); margin-bottom: 2rem;">
 
 **SAN FRANCISCO, CALIFORNIA - October 29, 2025** - Rangeway Energy, the hospitality-driven EV charging network for America's scenic corridors, today announced the appointment of Theo Reichgelt as Fractional Chief Marketing Officer. Reichgelt, founder of Netherlands-based Nexxt Industry, brings proven eMobility marketing expertise from building brands across European markets.
 
