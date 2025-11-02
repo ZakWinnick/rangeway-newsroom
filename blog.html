@@ -1,0 +1,46 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<!-- Hero Section -->
+<section class="hero-modern" style="min-height: 50vh;">
+    <div class="hero-background" style="background: linear-gradient(135deg, var(--sunset-coral) 0%, var(--golden-highway) 100%);"></div>
+    <div class="hero-content-modern">
+        <h1 class="hero-title-modern">
+            Rangeway <span class="hero-title-highlight">Blog</span>
+        </h1>
+        <p class="hero-description-modern">
+            Company updates, insights, and behind-the-scenes
+        </p>
+    </div>
+</section>
+
+<!-- All Blog Posts -->
+<section>
+    <div class="container">
+        <div class="difference-grid">
+            {% for post in site.posts %}
+            <div class="difference-card">
+                <span class="section-badge">{{ post.date | date: "%B %d, %Y" }}</span>
+                <h3 style="margin-top: 1rem;">{{ post.title }}</h3>
+                {% if post.author %}
+                <p style="color: var(--fog-gray); font-size: 0.9rem; margin-top: 0.5rem;">By {{ post.author }}</p>
+                {% endif %}
+                <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                <a href="{{ post.url | relative_url }}" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
+                    Read more <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            {% endfor %}
+
+            {% if site.posts.size == 0 %}
+            <div class="difference-card" style="grid-column: 1 / -1; text-align: center; padding: 4rem;">
+                <h3>No blog posts yet</h3>
+                <p>Check back soon for updates and insights.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

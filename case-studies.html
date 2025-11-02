@@ -1,0 +1,45 @@
+---
+layout: default
+title: Case Studies
+permalink: /case-studies/
+---
+
+<!-- Hero Section -->
+<section class="hero-modern" style="min-height: 50vh;">
+    <div class="hero-background" style="background: linear-gradient(135deg, var(--mountain-charcoal) 0%, var(--golden-highway) 100%);"></div>
+    <div class="hero-content-modern">
+        <h1 class="hero-title-modern">
+            Case <span class="hero-title-highlight">Studies</span>
+        </h1>
+        <p class="hero-description-modern">
+            In-depth stories and data-driven insights
+        </p>
+    </div>
+</section>
+
+<!-- All Case Studies -->
+<section>
+    <div class="container">
+        <div class="difference-grid">
+            {% for study in site.case_studies reversed %}
+            <div class="difference-card">
+                <h3>{{ study.title }}</h3>
+                {% if study.subtitle %}
+                <p style="color: var(--fog-gray); margin-top: 0.5rem;">{{ study.subtitle }}</p>
+                {% endif %}
+                <p>{{ study.excerpt | strip_html | truncatewords: 30 }}</p>
+                <a href="{{ study.url | relative_url }}" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
+                    Read case study <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            {% endfor %}
+
+            {% if site.case_studies.size == 0 %}
+            <div class="difference-card" style="grid-column: 1 / -1; text-align: center; padding: 4rem;">
+                <h3>No case studies yet</h3>
+                <p>Check back soon for in-depth insights.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

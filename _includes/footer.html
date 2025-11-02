@@ -1,0 +1,81 @@
+<footer class="modern-footer">
+    <div class="footer-content">
+        <div class="footer-section footer-brand">
+            <h4>{{ site.organization.name }}</h4>
+            <p class="footer-tagline">{{ site.organization.tagline }}</p>
+            <p class="footer-mission">Making EV road trips to America's scenic destinations preferable, not just possible.</p>
+
+            <div class="footer-social">
+                <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h4>Newsroom</h4>
+            <a href="{{ '/press/' | relative_url }}">Press Releases</a>
+            <a href="{{ '/case-studies/' | relative_url }}">Case Studies</a>
+            <a href="{{ '/blog/' | relative_url }}">Blog</a>
+            <a href="{{ '/media-kit/' | relative_url }}">Media Kit</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Main Site</h4>
+            <a href="{{ site.organization.main_site }}">Home</a>
+            <a href="{{ site.organization.main_site }}/why-rangeway.php">Why Rangeway</a>
+            <a href="{{ site.organization.main_site }}/network.php">Network</a>
+            <a href="{{ site.organization.main_site }}/for-travelers.php">For Travelers</a>
+        </div>
+
+        <div class="footer-section footer-contact">
+            <h4>Media Contact</h4>
+            <p><a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a></p>
+            <p><a href="tel:{{ site.organization.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">{{ site.organization.phone }}</a></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.organization.name }}. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://fieldnotes.rangeway.energy" target="_blank" rel="noopener noreferrer">Field Notes Newsletter</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- External JavaScript -->
+<script>
+// Mobile menu toggle
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const hamburger = document.querySelector('.hamburger');
+    const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+
+    hamburger.setAttribute('aria-expanded', !isExpanded);
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const nav = document.querySelector('.modern-nav');
+    const hamburger = document.querySelector('.hamburger');
+
+    if (!nav.contains(event.target)) {
+        document.getElementById('navLinks').classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
+});
+</script>

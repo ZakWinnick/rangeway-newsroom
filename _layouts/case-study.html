@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<article class="case-study">
+    <!-- Hero Section -->
+    <section class="hero-modern" style="min-height: 40vh;">
+        <div class="hero-background" style="background: linear-gradient(135deg, var(--mountain-charcoal) 0%, var(--golden-highway) 100%);"></div>
+        <div class="hero-content-modern">
+            <span class="section-badge">Case Study</span>
+            <h1 class="hero-title-modern" style="font-size: 2.5rem;">
+                {{ page.title }}
+            </h1>
+            {% if page.subtitle %}
+            <p class="hero-description-modern">
+                {{ page.subtitle }}
+            </p>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section>
+        <div class="container" style="max-width: 900px;">
+            <div class="difference-card" style="padding: 3rem;">
+                <div class="case-study-content" style="color: var(--coastal-cream); line-height: 1.8; font-size: 1.1rem;">
+                    {{ content }}
+                </div>
+
+                {% if page.pdf %}
+                <div style="margin-top: 3rem; text-align: center;">
+                    <a href="{{ page.pdf | relative_url }}" class="btn-primary-modern" download>
+                        <i class="fas fa-download"></i> Download Full Case Study (PDF)
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Case Studies -->
+    {% if site.case_studies.size > 1 %}
+    <section class="difference-section">
+        <div class="container">
+            <div class="section-header-modern">
+                <h2>More Case Studies</h2>
+            </div>
+            <div class="difference-grid">
+                {% assign counter = 0 %}
+                {% for study in site.case_studies reversed %}
+                    {% if study.url != page.url and counter < 3 %}
+                    <div class="difference-card">
+                        <h3>{{ study.title }}</h3>
+                        {% if study.subtitle %}
+                        <p style="color: var(--fog-gray); margin-top: 0.5rem;">{{ study.subtitle }}</p>
+                        {% endif %}
+                        <p>{{ study.excerpt | strip_html | truncatewords: 30 }}</p>
+                        <a href="{{ study.url | relative_url }}" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
+                            Read case study <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    {% assign counter = counter | plus: 1 %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+</article>

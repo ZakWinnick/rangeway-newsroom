@@ -1,0 +1,96 @@
+---
+layout: default
+---
+
+<article class="press-release">
+    <!-- Hero Section -->
+    <section class="hero-modern" style="min-height: 40vh;">
+        <div class="hero-background" style="background: linear-gradient(135deg, var(--mountain-charcoal) 0%, var(--sunset-coral) 100%);"></div>
+        <div class="hero-content-modern">
+            <span class="section-badge">Press Release</span>
+            <h1 class="hero-title-modern" style="font-size: 2.5rem;">
+                {{ page.title }}
+            </h1>
+            <p class="hero-description-modern">
+                {{ page.date | date: "%B %d, %Y" }}
+            </p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section>
+        <div class="container" style="max-width: 800px;">
+            <div class="difference-card" style="padding: 3rem;">
+                <div class="press-release-meta" style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <strong style="color: var(--coastal-cream); display: block; margin-bottom: 0.5rem;">Media Contact</strong>
+                            <p style="margin: 0; color: var(--fog-gray);">
+                                <a href="mailto:{{ site.organization.email }}" style="color: var(--golden-highway); text-decoration: none;">
+                                    {{ site.organization.email }}
+                                </a>
+                            </p>
+                        </div>
+                        {% if page.pdf %}
+                        <div>
+                            <a href="{{ page.pdf | relative_url }}" class="btn-primary-modern" download>
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="press-release-content" style="color: var(--coastal-cream); line-height: 1.8; font-size: 1.1rem;">
+                    {{ content }}
+                </div>
+
+                <!-- Social Share -->
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                    <strong style="color: var(--coastal-cream); display: block; margin-bottom: 1rem;">Share this release:</strong>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url }}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-md); color: var(--coastal-cream); text-decoration: none; transition: var(--transition);">
+                            <i class="fa-brands fa-x-twitter"></i> Share on X
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-md); color: var(--coastal-cream); text-decoration: none; transition: var(--transition);">
+                            <i class="fa-brands fa-linkedin"></i> Share on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Releases -->
+    {% if site.press_releases.size > 1 %}
+    <section class="difference-section">
+        <div class="container">
+            <div class="section-header-modern">
+                <h2>Recent Press Releases</h2>
+            </div>
+            <div class="difference-grid">
+                {% assign counter = 0 %}
+                {% for release in site.press_releases reversed %}
+                    {% if release.url != page.url and counter < 3 %}
+                    <div class="difference-card">
+                        <span class="section-badge">{{ release.date | date: "%b %d, %Y" }}</span>
+                        <h3 style="margin-top: 1rem;">{{ release.title }}</h3>
+                        <p>{{ release.excerpt | strip_html | truncatewords: 30 }}</p>
+                        <a href="{{ release.url | relative_url }}" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
+                            Read more <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    {% assign counter = counter | plus: 1 %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+</article>

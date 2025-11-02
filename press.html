@@ -1,0 +1,43 @@
+---
+layout: default
+title: Press Releases
+permalink: /press/
+---
+
+<!-- Hero Section -->
+<section class="hero-modern" style="min-height: 50vh;">
+    <div class="hero-background" style="background: linear-gradient(135deg, var(--mountain-charcoal) 0%, var(--sunset-coral) 100%);"></div>
+    <div class="hero-content-modern">
+        <h1 class="hero-title-modern">
+            Press <span class="hero-title-highlight">Releases</span>
+        </h1>
+        <p class="hero-description-modern">
+            Official announcements and company news
+        </p>
+    </div>
+</section>
+
+<!-- All Press Releases -->
+<section>
+    <div class="container">
+        <div class="difference-grid">
+            {% for release in site.press_releases reversed %}
+            <div class="difference-card">
+                <span class="section-badge">{{ release.date | date: "%B %d, %Y" }}</span>
+                <h3 style="margin-top: 1rem;">{{ release.title }}</h3>
+                <p>{{ release.excerpt | strip_html | truncatewords: 30 }}</p>
+                <a href="{{ release.url | relative_url }}" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
+                    Read full release <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            {% endfor %}
+
+            {% if site.press_releases.size == 0 %}
+            <div class="difference-card" style="grid-column: 1 / -1; text-align: center; padding: 4rem;">
+                <h3>No press releases yet</h3>
+                <p>Check back soon for official announcements.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
