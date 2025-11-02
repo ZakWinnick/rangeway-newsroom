@@ -1,0 +1,27 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title }} - Case Studies</title>
+    <description>Case studies from {{ site.organization.name }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/case-studies/</link>
+    <atom:link href="{{ site.url }}{{ site.baseurl }}/feed-case-studies.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    {% for study in site.case_studies reversed limit:20 %}
+      <item>
+        <title>{{ study.title | xml_escape }}</title>
+        <description>{{ study.content | xml_escape }}</description>
+        <pubDate>{{ study.date | default: site.time | date_to_rfc822 }}</pubDate>
+        <link>{{ site.url }}{{ study.url }}</link>
+        <guid isPermaLink="true">{{ site.url }}{{ study.url }}</guid>
+        {% if study.subtitle %}
+        <category>{{ study.subtitle | xml_escape }}</category>
+        {% endif %}
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
