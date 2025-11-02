@@ -5,6 +5,8 @@ date: 2025-10-29
 description: "European eMobility marketing expert joins to build brand foundation for California launch and US expansion"
 ---
 
+![Rangeway Energy and Nexxt Industry partnership announcement](/assets/images/nexxtannouncment.jpg)
+
 **SAN FRANCISCO, CALIFORNIA - October 29, 2025** - Rangeway Energy, the hospitality-driven EV charging network for America's scenic corridors, today announced the appointment of Theo Reichgelt as Fractional Chief Marketing Officer. Reichgelt, founder of Netherlands-based Nexxt Industry, brings proven eMobility marketing expertise from building brands across European markets.
 
 The appointment comes as Rangeway prepares to launch its first Basecamp location in Baker, California, and advance its Pre-Seed funding round. Reichgelt will lead brand development, market positioning, and go-to-market strategy as the company scales its hub-satellite network across scenic routes throughout the western United States.
@@ -26,8 +28,6 @@ Reichgelt founded Nexxt Industry to support charge point operators entering and 
 This collaboration marks Nexxt Industry's first US market engagement, bringing proven frameworks for retail-integrated charging experiences to Rangeway's California launch and planned expansion into Nevada, Arizona, Utah, and the Pacific Northwest.
 
 Rangeway's Phase 1 deployment focuses on the California desert corridor, with the Baker Basecamp serving as both a flagship location and proof of concept for the company's hospitality-driven model. The site will demonstrate indoor comfort guarantees, hub-satellite operational reliability, and member rate predictability through the company's Pathfinder Rewards loyalty program.
-
-![Rangeway Energy and Nexxt Industry partnership announcement](/assets/images/nexxtannouncment.jpg)
 
 ## About Rangeway Energy
 
