@@ -27,6 +27,8 @@ This collaboration marks Nexxt Industry's first US market engagement, bringing p
 
 Rangeway's Phase 1 deployment focuses on the California desert corridor, with the Baker Basecamp serving as both a flagship location and proof of concept for the company's hospitality-driven model. The site will demonstrate indoor comfort guarantees, hub-satellite operational reliability, and member rate predictability through the company's Pathfinder Rewards loyalty program.
 
+![Rangeway Energy and Nexxt Industry partnership announcement](/assets/images/nexxtannouncment.jpg)
+
 ## About Rangeway Energy
 
 Rangeway Energy is building America's premier electric vehicle charging network for scenic corridors. Every Rangeway location features climate-controlled indoor lounges, premium cafés, and ultra-fast charging infrastructure—eliminating the parking lot waits that plague traditional EV charging. The company's hub-satellite model delivers 99% uptime at Basecamp hubs and 98% uptime at Waystation satellites, with member rates that remain flat regardless of time of day. Founded by hospitality entrepreneur Zak Winnick, Rangeway is headquartered in San Francisco, California.
