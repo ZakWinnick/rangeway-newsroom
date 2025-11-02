@@ -1,3 +1,62 @@
+<!-- RSS Subscribe Section -->
+<section style="background: linear-gradient(135deg, var(--mountain-charcoal) 0%, rgba(240, 144, 96, 0.1) 100%); padding: 4rem 0; border-top: 1px solid rgba(240, 144, 96, 0.2);">
+    <div class="container" style="max-width: 1000px;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h2 style="color: var(--coastal-cream); font-size: 2rem; margin-bottom: 0.75rem;">
+                <i class="fas fa-rss" style="color: var(--golden-highway); margin-right: 0.5rem;"></i>
+                Stay Updated with RSS
+            </h2>
+            <p style="color: var(--fog-gray); font-size: 1.1rem;">Subscribe to our feeds in your favorite RSS reader</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+            <!-- All Content Feed -->
+            <div style="background: rgba(240, 144, 96, 0.1); border: 2px solid rgba(240, 144, 96, 0.3); border-radius: var(--radius-md); padding: 1.5rem; text-align: center; transition: var(--transition);">
+                <i class="fas fa-globe" style="color: var(--golden-highway); font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
+                <h3 style="color: var(--coastal-cream); font-size: 1.25rem; margin-bottom: 0.5rem;">All Content</h3>
+                <p style="color: var(--fog-gray); font-size: 0.9rem; margin-bottom: 1rem;">Everything we publish</p>
+                <a href="{{ '/feed.xml' | relative_url }}"
+                   style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--golden-highway); color: var(--mountain-charcoal); text-decoration: none; font-weight: 600; border-radius: var(--radius-sm); transition: var(--transition);">
+                    <i class="fas fa-rss"></i> Subscribe
+                </a>
+            </div>
+
+            <!-- Press Releases Feed -->
+            <div style="background: rgba(240, 144, 96, 0.1); border: 2px solid rgba(240, 144, 96, 0.3); border-radius: var(--radius-md); padding: 1.5rem; text-align: center; transition: var(--transition);">
+                <i class="fas fa-newspaper" style="color: var(--sunset-coral); font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
+                <h3 style="color: var(--coastal-cream); font-size: 1.25rem; margin-bottom: 0.5rem;">Press Releases</h3>
+                <p style="color: var(--fog-gray); font-size: 0.9rem; margin-bottom: 1rem;">Official announcements</p>
+                <a href="{{ '/feed-press.xml' | relative_url }}"
+                   style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--sunset-coral); color: white; text-decoration: none; font-weight: 600; border-radius: var(--radius-sm); transition: var(--transition);">
+                    <i class="fas fa-rss"></i> Subscribe
+                </a>
+            </div>
+
+            <!-- Case Studies Feed -->
+            <div style="background: rgba(240, 144, 96, 0.1); border: 2px solid rgba(240, 144, 96, 0.3); border-radius: var(--radius-md); padding: 1.5rem; text-align: center; transition: var(--transition);">
+                <i class="fas fa-chart-line" style="color: var(--golden-highway); font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
+                <h3 style="color: var(--coastal-cream); font-size: 1.25rem; margin-bottom: 0.5rem;">Case Studies</h3>
+                <p style="color: var(--fog-gray); font-size: 0.9rem; margin-bottom: 1rem;">Data and insights</p>
+                <a href="{{ '/feed-case-studies.xml' | relative_url }}"
+                   style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--golden-highway); color: var(--mountain-charcoal); text-decoration: none; font-weight: 600; border-radius: var(--radius-sm); transition: var(--transition);">
+                    <i class="fas fa-rss"></i> Subscribe
+                </a>
+            </div>
+
+            <!-- Blog Feed -->
+            <div style="background: rgba(240, 144, 96, 0.1); border: 2px solid rgba(240, 144, 96, 0.3); border-radius: var(--radius-md); padding: 1.5rem; text-align: center; transition: var(--transition);">
+                <i class="fas fa-pen" style="color: var(--sunset-coral); font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
+                <h3 style="color: var(--coastal-cream); font-size: 1.25rem; margin-bottom: 0.5rem;">Blog</h3>
+                <p style="color: var(--fog-gray); font-size: 0.9rem; margin-bottom: 1rem;">Updates and stories</p>
+                <a href="{{ '/feed-blog.xml' | relative_url }}"
+                   style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--sunset-coral); color: white; text-decoration: none; font-weight: 600; border-radius: var(--radius-sm); transition: var(--transition);">
+                    <i class="fas fa-rss"></i> Subscribe
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Podcast Section -->
 <section style="background: var(--mountain-charcoal); padding: 3rem 0; border-top: 1px solid rgba(240, 144, 96, 0.2);">
     <div class="container" style="max-width: 800px;">
