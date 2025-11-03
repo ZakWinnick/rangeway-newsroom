@@ -1,0 +1,21 @@
+{% comment %}
+Reusable Social Share Component
+Usage: {% include social-share.html title=page.title url=page.url %}
+{% endcomment %}
+<div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+    <strong style="color: var(--text-heading); display: block; margin-bottom: 1rem;">Share this {{ include.type | default: "content" }}:</strong>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="https://twitter.com/intent/tweet?text={{ include.title | uri_escape }}&url={{ include.url | absolute_url }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn-secondary">
+            <i class="fa-brands fa-x-twitter"></i> Share on X
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ include.url | absolute_url }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn-secondary">
+            <i class="fa-brands fa-linkedin"></i> Share on LinkedIn
+        </a>
+    </div>
+</div>

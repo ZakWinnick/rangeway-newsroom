@@ -3,70 +3,40 @@ layout: default
 ---
 
 <article class="blog-post">
-    <!-- Hero Section -->
-    <section class="hero-modern" style="min-height: 40vh;">
-        {% if page.image %}
-        <div class="hero-background" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('{{ page.image }}'); background-position: center; background-size: cover;"></div>
-        {% else %}
-        <div class="hero-background" style="background: linear-gradient(135deg, var(--sunset-coral) 0%, var(--golden-highway) 100%);"></div>
-        {% endif %}
-        <div class="hero-content-modern">
-            <span class="section-badge">Blog</span>
-            <h1 class="hero-title-modern" style="font-size: 2.5rem;">
-                {{ page.title }}
-            </h1>
-            <p class="hero-description-modern">
-                {{ page.date | date: "%B %d, %Y" }}{% if page.author %} • By {{ page.author }}{% endif %}
-            </p>
-        </div>
-    </section>
+    {% include content-hero.html badge="Blog" title=page.title date=page.date author=page.author %}
 
     <!-- Content Section -->
-    <section>
+    <section style="padding: 40px 0;">
         <div class="container" style="max-width: 800px;">
-            <div class="difference-card" style="padding: 3rem;">
-                <div class="blog-content" style="color: var(--coastal-cream); line-height: 1.8; font-size: 1.1rem;">
+            <div class="service-card" style="padding: 3rem;">
+                <div class="blog-content" style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
                     {{ content }}
                 </div>
 
-                <!-- Social Share -->
-                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                    <strong style="color: var(--coastal-cream); display: block; margin-bottom: 1rem;">Share this post:</strong>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url }}"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-md); color: var(--coastal-cream); text-decoration: none; transition: var(--transition);">
-                            <i class="fa-brands fa-x-twitter"></i> Share on X
-                        </a>
-                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-md); color: var(--coastal-cream); text-decoration: none; transition: var(--transition);">
-                            <i class="fa-brands fa-linkedin"></i> Share on LinkedIn
-                        </a>
-                    </div>
-                </div>
+                {% include social-share.html title=page.title url=page.url type="post" %}
             </div>
         </div>
     </section>
 
     <!-- Recent Posts -->
     {% if site.posts.size > 1 %}
-    <section class="difference-section">
+    <section class="services" style="background: var(--bg-secondary);">
         <div class="container">
-            <div class="section-header-modern">
+            <div style="text-align: center; margin-bottom: 3rem;">
                 <h2>Recent Posts</h2>
             </div>
-            <div class="difference-grid">
+            <div class="services-grid">
                 {% assign counter = 0 %}
                 {% for post in site.posts %}
                     {% if post.url != page.url and counter < 3 %}
-                    <div class="difference-card">
-                        <span class="section-badge">{{ post.date | date: "%b %d, %Y" }}</span>
-                        <h3 style="margin-top: 1rem;">{{ post.title }}</h3>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-pen" style="font-size: 2rem;"></i>
+                        </div>
+                        <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ post.date | date: "%b %d, %Y" }}</span>
+                        <h3>{{ post.title }}</h3>
                         <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-                        <a href="{{ post.url | relative_url }}" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
+                        <a href="{{ post.url | relative_url }}" class="card-link">
                             Read more <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>

@@ -4,29 +4,11 @@ title: Rangeway Energy Newsroom
 ---
 
 <!-- Hero Section -->
-<section class="hero-modern">
-    <div class="hero-background" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://rangeway.energy/images/waystation-exterior1-jt.jpg'); background-position: center; background-size: cover;"></div>
-    <div class="hero-content-modern">
-        <h1 class="hero-title-modern">
-            Rangeway Energy <span class="hero-title-highlight">Newsroom</span>
-        </h1>
-        <p class="hero-description-modern">
-            Latest news, press releases, and updates from America's premier scenic corridor charging network.
-        </p>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator">
-        <div class="scroll-arrow"></div>
-    </div>
-</section>
-
-<!-- Separator -->
-<section style="background: var(--mountain-charcoal); padding: 3rem 0; border-top: 1px solid rgba(240, 144, 96, 0.2); border-bottom: 1px solid rgba(240, 144, 96, 0.2);">
-    <div class="container" style="max-width: 1200px; text-align: center;">
-        <div style="display: inline-block; padding: 1rem 2rem; background: rgba(240, 144, 96, 0.1); border-radius: var(--radius-md); border: 1px solid rgba(240, 144, 96, 0.3);">
-            <i class="fas fa-newspaper" style="color: var(--golden-highway); font-size: 1.5rem; margin-right: 0.75rem;"></i>
-            <span style="color: var(--coastal-cream); font-weight: 600; font-size: 1.1rem;">Latest Announcements</span>
+<section class="hero">
+    <div class="hero-grid container">
+        <div class="hero-content">
+            <h1>Rangeway Energy <span style="color: var(--accent-color);">Newsroom</span></h1>
+            <p>Latest news, press releases, and updates from America's premier scenic corridor charging network.</p>
         </div>
     </div>
 </section>
@@ -34,46 +16,52 @@ title: Rangeway Energy Newsroom
 <!-- Latest Press Release -->
 {% assign latest_release = site.press_releases | reverse | first %}
 {% if latest_release %}
-<section class="basecamp-spotlight">
-    <div class="spotlight-content">
-        <div class="spotlight-text">
-            <span class="spotlight-badge">Latest Press Release</span>
-            <h2>{{ latest_release.title }}</h2>
-            <p class="spotlight-location">{{ latest_release.date | date: "%B %d, %Y" }}</p>
-            <p>{{ latest_release.excerpt | strip_html | truncatewords: 50 }}</p>
-            <a href="{{ latest_release.url | relative_url }}" class="btn-primary-modern">Read Full Release <i class="fas fa-arrow-right"></i></a>
-        </div>
+<section class="network-map">
+    <div class="container">
+        <div class="network-map-grid">
+            <div class="network-map-content">
+                <span class="location-badge" style="position: relative; z-index: 1; background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 700; box-shadow: 0 4px 16px rgba(240, 144, 96, 0.3); text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 1.5rem;">Latest Press Release</span>
+                <h2 style="position: relative; z-index: 1;">{{ latest_release.title }}</h2>
+                <p style="color: #F09060; font-weight: 600; margin-bottom: 1rem; position: relative; z-index: 1;">{{ latest_release.date | date: "%B %d, %Y" }}</p>
+                <p style="position: relative; z-index: 1; margin-bottom: 2rem;">{{ latest_release.excerpt | strip_html | truncatewords: 50 }}</p>
+                <div style="position: relative; z-index: 1;">
+                    <a href="{{ latest_release.url | relative_url }}" class="btn-primary" style="background: #F09060; border-color: #F09060; margin-left: 0 !important; margin-right: auto !important;">Read Full Release <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-        {% if latest_release.image %}
-        <div class="spotlight-image">
-            <img src="{{ latest_release.image | relative_url }}"
-                 alt="{{ latest_release.title }}"
-                 loading="lazy"
-                 decoding="async">
+            {% if latest_release.image %}
+            <div class="network-map-image">
+                <img src="{{ latest_release.image | relative_url }}"
+                     alt="{{ latest_release.title }}"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            {% endif %}
         </div>
-        {% endif %}
     </div>
 </section>
 {% endif %}
 
 <!-- Recent Press Releases -->
-<section class="difference-section">
+<section class="services">
     <div class="container">
-        <div class="section-header-modern">
-            <span class="section-badge">Press</span>
+        <div style="text-align: center; margin-bottom: 3rem;">
             <h2>Recent Press Releases</h2>
-            <p>Official announcements and company news</p>
+            <p style="color: var(--text-secondary);">Official announcements and company news</p>
         </div>
 
-        <div class="difference-grid">
+        <div class="services-grid">
             {% assign counter = 0 %}
             {% for release in site.press_releases reversed %}
                 {% if counter < 6 %}
-                <div class="difference-card">
-                    <span class="section-badge">{{ release.date | date: "%B %d, %Y" }}</span>
-                    <h3 style="margin-top: 1rem;">{{ release.title }}</h3>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-newspaper" style="font-size: 2rem;"></i>
+                    </div>
+                    <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ release.date | date: "%B %d, %Y" }}</span>
+                    <h3>{{ release.title }}</h3>
                     <p>{{ release.excerpt | strip_html | truncatewords: 30 }}</p>
-                    <a href="{{ release.url | relative_url }}" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
+                    <a href="{{ release.url | relative_url }}" class="card-link">
                         Read more <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -84,7 +72,7 @@ title: Rangeway Energy Newsroom
 
         {% if site.press_releases.size > 6 %}
         <div style="text-align: center; margin-top: 3rem;">
-            <a href="{{ '/press/' | relative_url }}" class="btn-primary-modern">
+            <a href="{{ '/press/' | relative_url }}" class="btn-primary">
                 View All Press Releases
             </a>
         </div>
@@ -94,25 +82,27 @@ title: Rangeway Energy Newsroom
 
 <!-- Recent Case Studies -->
 {% if site.case_studies.size > 0 %}
-<section class="difference-section">
+<section class="network-map" style="background: var(--bg-secondary);">
     <div class="container">
-        <div class="section-header-modern">
-            <span class="section-badge">Case Studies</span>
+        <div style="text-align: center; margin-bottom: 3rem;">
             <h2>In-Depth Insights</h2>
-            <p>Data-driven stories and analysis</p>
+            <p style="color: var(--text-secondary);">Data-driven stories and analysis</p>
         </div>
 
-        <div class="difference-grid">
+        <div class="services-grid">
             {% assign counter = 0 %}
             {% for study in site.case_studies reversed %}
                 {% if counter < 3 %}
-                <div class="difference-card">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line" style="font-size: 2rem;"></i>
+                    </div>
                     <h3>{{ study.title }}</h3>
                     {% if study.subtitle %}
-                    <p style="color: var(--fog-gray); margin-top: 0.5rem; font-size: 0.95rem;">{{ study.subtitle }}</p>
+                    <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.95rem;">{{ study.subtitle }}</p>
                     {% endif %}
                     <p style="margin-top: 1rem;">{{ study.excerpt | strip_html | truncatewords: 30 }}</p>
-                    <a href="{{ study.url | relative_url }}" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
+                    <a href="{{ study.url | relative_url }}" class="card-link">
                         Read case study <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -122,7 +112,7 @@ title: Rangeway Energy Newsroom
         </div>
 
         <div style="text-align: center; margin-top: 3rem;">
-            <a href="{{ '/case-studies/' | relative_url }}" class="btn-primary-modern">
+            <a href="{{ '/case-studies/' | relative_url }}" class="btn-primary">
                 View All Case Studies
             </a>
         </div>
@@ -132,23 +122,25 @@ title: Rangeway Energy Newsroom
 
 <!-- Recent Blog Posts -->
 {% if site.posts.size > 0 %}
-<section>
+<section class="services">
     <div class="container">
-        <div class="section-header-modern">
-            <span class="section-badge">Blog</span>
+        <div style="text-align: center; margin-bottom: 3rem;">
             <h2>Latest Updates</h2>
-            <p>Company news, insights, and behind-the-scenes</p>
+            <p style="color: var(--text-secondary);">Company news, insights, and behind-the-scenes</p>
         </div>
 
-        <div class="difference-grid">
+        <div class="services-grid">
             {% assign counter = 0 %}
             {% for post in site.posts %}
                 {% if counter < 3 %}
-                <div class="difference-card">
-                    <span class="section-badge">{{ post.date | date: "%B %d, %Y" }}</span>
-                    <h3 style="margin-top: 1rem;">{{ post.title }}</h3>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pen" style="font-size: 2rem;"></i>
+                    </div>
+                    <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ post.date | date: "%B %d, %Y" }}</span>
+                    <h3>{{ post.title }}</h3>
                     <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-                    <a href="{{ post.url | relative_url }}" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
+                    <a href="{{ post.url | relative_url }}" class="card-link">
                         Read more <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>

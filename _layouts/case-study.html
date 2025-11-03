@@ -3,37 +3,19 @@ layout: default
 ---
 
 <article class="case-study">
-    <!-- Hero Section -->
-    <section class="hero-modern" style="min-height: 40vh;">
-        {% if page.image %}
-        <div class="hero-background" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('{{ page.image }}'); background-position: center; background-size: cover;"></div>
-        {% else %}
-        <div class="hero-background" style="background: linear-gradient(135deg, var(--mountain-charcoal) 0%, var(--golden-highway) 100%);"></div>
-        {% endif %}
-        <div class="hero-content-modern">
-            <span class="section-badge">Case Study</span>
-            <h1 class="hero-title-modern" style="font-size: 2.5rem;">
-                {{ page.title }}
-            </h1>
-            {% if page.subtitle %}
-            <p class="hero-description-modern">
-                {{ page.subtitle }}
-            </p>
-            {% endif %}
-        </div>
-    </section>
+    {% include content-hero.html badge="Case Study" title=page.title subtitle=page.subtitle %}
 
     <!-- Content Section -->
-    <section>
+    <section style="padding: 40px 0;">
         <div class="container" style="max-width: 900px;">
-            <div class="difference-card" style="padding: 3rem;">
-                <div class="case-study-content" style="color: var(--coastal-cream); line-height: 1.8; font-size: 1.1rem;">
+            <div class="service-card" style="padding: 3rem;">
+                <div class="case-study-content" style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
                     {{ content }}
                 </div>
 
                 {% if page.pdf %}
                 <div style="margin-top: 3rem; text-align: center;">
-                    <a href="{{ page.pdf | relative_url }}" class="btn-primary-modern" download>
+                    <a href="{{ page.pdf | relative_url }}" class="btn-primary" download>
                         <i class="fas fa-download"></i> Download Full Case Study (PDF)
                     </a>
                 </div>
@@ -44,22 +26,25 @@ layout: default
 
     <!-- Related Case Studies -->
     {% if site.case_studies.size > 1 %}
-    <section class="difference-section">
+    <section class="services" style="background: var(--bg-secondary);">
         <div class="container">
-            <div class="section-header-modern">
+            <div style="text-align: center; margin-bottom: 3rem;">
                 <h2>More Case Studies</h2>
             </div>
-            <div class="difference-grid">
+            <div class="services-grid">
                 {% assign counter = 0 %}
                 {% for study in site.case_studies reversed %}
                     {% if study.url != page.url and counter < 3 %}
-                    <div class="difference-card">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line" style="font-size: 2rem;"></i>
+                        </div>
                         <h3>{{ study.title }}</h3>
                         {% if study.subtitle %}
-                        <p style="color: var(--fog-gray); margin-top: 0.5rem;">{{ study.subtitle }}</p>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem;">{{ study.subtitle }}</p>
                         {% endif %}
                         <p>{{ study.excerpt | strip_html | truncatewords: 30 }}</p>
-                        <a href="{{ study.url | relative_url }}" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
+                        <a href="{{ study.url | relative_url }}" class="card-link">
                             Read case study <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>

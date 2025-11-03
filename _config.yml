@@ -6,6 +6,7 @@ title: Rangeway Energy Newsroom
 description: "Official newsroom for Rangeway Energy. Latest announcements, press releases, and media kit for America's premier scenic corridor charging network."
 url: "https://newsroom.rangeway.energy"
 baseurl: ""
+asset_version: "2.0"
 
 # Organization info
 organization:
@@ -21,6 +22,11 @@ social:
   instagram: "https://instagram.com/rangewayenergy"
   linkedin: "https://linkedin.com/company/rangewayenergy"
   youtube: "https://youtube.com/@rangewayenergy"
+
+# Analytics
+analytics:
+  enabled: true
+  tinylytics_id: "Ttvq2PXhcrG1Fe7a9H-v"
 
 # Build settings
 markdown: kramdown

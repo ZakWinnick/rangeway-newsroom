@@ -1,0 +1,20 @@
+{% comment %}
+Reusable Hero Component for Content Pages
+Usage: {% include content-hero.html badge="Press Release" title=page.title subtitle=page.subtitle date=page.date author=page.author %}
+{% endcomment %}
+<section class="hero" style="padding: 120px 0 80px;">
+    <div class="container" style="max-width: 900px;">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <span style="display: inline-block; background: #F09060; color: white; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 700; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(240, 144, 96, 0.5); text-transform: uppercase; letter-spacing: 0.5px;">{{ include.badge }}</span>
+            <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem;">{{ include.title }}</h1>
+            {% if include.subtitle %}
+            <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem;">{{ include.subtitle }}</p>
+            {% endif %}
+            {% if include.date %}
+            <p style="font-size: 1.1rem; color: var(--text-secondary);">
+                {{ include.date | date: "%B %d, %Y" }}{% if include.author %} • By {{ include.author }}{% endif %}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</section>
