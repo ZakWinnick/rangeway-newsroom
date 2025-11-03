@@ -5,7 +5,11 @@ layout: default
 <article class="blog-post">
     <!-- Hero Section -->
     <section class="hero-modern" style="min-height: 40vh;">
+        {% if page.image %}
+        <div class="hero-background" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('{{ page.image }}'); background-position: center; background-size: cover;"></div>
+        {% else %}
         <div class="hero-background" style="background: linear-gradient(135deg, var(--sunset-coral) 0%, var(--golden-highway) 100%);"></div>
+        {% endif %}
         <div class="hero-content-modern">
             <span class="section-badge">Blog</span>
             <h1 class="hero-title-modern" style="font-size: 2.5rem;">
