@@ -21,6 +21,9 @@ layout: null
         {% if release.description %}
         <description>{{ release.description | xml_escape }}</description>
         {% endif %}
+        {% if release.image %}
+        <enclosure url="{{ site.url }}{{ release.image }}" type="image/jpeg" />
+        {% endif %}
       </item>
     {% endfor %}
   </channel>

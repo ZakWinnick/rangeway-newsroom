@@ -22,6 +22,9 @@ layout: none
       {% if post.author %}
       <author>{{ post.author | xml_escape }}</author>
       {% endif %}
+      {% if post.image %}
+      <enclosure url="{{ site.url }}{{ post.image }}" type="image/jpeg" />
+      {% endif %}
     </item>
     {% endfor %}
 

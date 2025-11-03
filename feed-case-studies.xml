@@ -21,6 +21,9 @@ layout: null
         {% if study.subtitle %}
         <category>{{ study.subtitle | xml_escape }}</category>
         {% endif %}
+        {% if study.image %}
+        <enclosure url="{{ site.url }}{{ study.image }}" type="image/jpeg" />
+        {% endif %}
       </item>
     {% endfor %}
   </channel>
