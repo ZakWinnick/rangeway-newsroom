@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: "The 92% Reliability Threshold: The Industry's Progress and the Path Forward"
 subtitle: "How EV charging reached 92.3% reliability—and why 1 in 13 charging attempts still fail"
 description: "An analysis of the EV charging industry's 92.3% reliability milestone and the software-driven solutions addressing the #1 pain point for EV drivers."
