@@ -11,8 +11,7 @@ But here's the sobering reality: **1 in 13 charging attempts still fails.** For 
 
 At Rangeway Energy, we believe understanding this threshold—and the software-driven solutions closing the gap—is critical to building the reliable charging network America needs.
 
----
-
+---  
 
 ## The State of Reliability: Progress and Persistent Challenges
 
@@ -33,8 +32,7 @@ The industry has coalesced around "first charge success rate" as the critical me
 
 Federal programs like NEVI have established uptime expectations as standards, but as ChargerHelp's recent report emphasizes, **true reliability requires moving beyond basic uptime metrics to user-centered performance.**
 
----
-
+---  
 
 ## Challenge: Why Do 1 in 13 Charging Attempts Fail?
 
@@ -58,8 +56,7 @@ Current error reporting across the industry is inconsistent and often unhelpful.
 
 When maintenance teams can't access error codes, system status, and key logs, troubleshooting becomes slower and less scalable.
 
----
-
+---  
 
 ## Solution: Software-Driven Approaches to 99% Reliability
 
@@ -96,8 +93,7 @@ Hardware OEMs must grant backend access to reliability partners, ensuring operat
 
 Moving from hourly labor costs to fixed monthly fees with unlimited labor ensures vendor investment in reducing service calls and maintaining uptime.
 
----
-
+---  
 
 ## Results: The Rangeway Energy Approach
 
@@ -124,8 +120,7 @@ The industry's journey from 92.3% to true reliability requires:
 4. **Aligned O&M incentives** - Contracts that reward uptime, not truck rolls
 5. **Right to repair protections** - Ensuring parts availability and third-party support even as manufacturers consolidate
 
----
-
+---  
 
 ## Conclusion
 
@@ -139,13 +134,11 @@ But the solutions exist. Software-driven approaches—predictive maintenance, re
 
 At Rangeway Energy, we're committed to building that future. Because when charging just works, electric vehicles become the obvious choice.
 
----
-
+---  
 
 **About the Data:**
 This case study is based on Paren's Q3 2025 State of the U.S. EV Fast Charging Industry Report (analyzing 12,375 stations and 64,486 ports) and ChargerHelp's "Architecting a Reliable EV Ecosystem" Buyer's Report.
 
----
-
+---  
 
 *Want to stay updated on EV charging infrastructure insights? Subscribe to our [Field Notes newsletter](https://fieldnotes.rangeway.energy) or visit [rangeway.energy](https://rangeway.energy) to learn more about our approach to reliable, accessible EV charging.*
