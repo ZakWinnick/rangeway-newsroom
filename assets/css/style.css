@@ -1513,6 +1513,28 @@ p {
     }
 }
 
+/* Blog Post, Case Study, and Press Release Content Styles */
+.blog-content a,
+.case-study-content a,
+.press-release-content a {
+    color: #F09060; /* Sunset Coral */
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.blog-content a:visited,
+.case-study-content a:visited,
+.press-release-content a:visited {
+    color: var(--text-primary); /* Same as normal text */
+}
+
+.blog-content a:hover,
+.case-study-content a:hover,
+.press-release-content a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
 /* Contact Page Styles */
 
 /* Contact Hero Section */

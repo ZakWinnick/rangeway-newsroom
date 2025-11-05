@@ -1,6 +1,6 @@
 {% comment %}
 Reusable Hero Component for Content Pages
-Usage: {% include content-hero.html badge="Press Release" title=page.title subtitle=page.subtitle date=page.date author=page.author %}
+Usage: {% include content-hero.html badge="Press Release" title=page.title subtitle=page.subtitle date=page.date author=page.author image=page.image %}
 {% endcomment %}
 <section class="hero" style="padding: 120px 0 80px;">
     <div class="container" style="max-width: 900px;">
@@ -16,5 +16,10 @@ Usage: {% include content-hero.html badge="Press Release" title=page.title subti
             </p>
             {% endif %}
         </div>
+        {% if include.image %}
+        <div style="margin-top: 2rem;">
+            <img src="{{ include.image | relative_url }}" alt="{{ include.title }}" style="width: 100%; max-width: 900px; border-radius: 12px; box-shadow: 0 10px 40px var(--shadow-medium);">
+        </div>
+        {% endif %}
     </div>
 </section>
