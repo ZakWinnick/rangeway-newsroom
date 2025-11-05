@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2025-11-05 06:00:00 -0800
+date: 2025-11-05 06:05:00 -0800
 author: Zak Winnick
 title: "The 92% Reliability Threshold: The Industry's Progress and the Path Forward"
 subtitle: "How EV charging reached 92.3% reliability—and why 1 in 13 charging attempts still fail"
