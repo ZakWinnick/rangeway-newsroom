@@ -251,7 +251,7 @@ p {
 
 /* Hero Section */
 .hero {
-    padding: 120px 0 80px;
+    padding: 160px 0 100px;
     background: var(--bg-secondary);
     transition: background 0.3s ease;
 }
@@ -343,6 +343,9 @@ p {
     border-radius: 12px;
     box-shadow: 0 4px 20px var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card:hover {
