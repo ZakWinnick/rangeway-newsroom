@@ -1,15 +1,18 @@
 ---
-layout: case-study
+layout: post
+date: 2025-11-05
+auuthor: Zak Winnick
 title: "The 92% Reliability Threshold: The Industry's Progress and the Path Forward"
 subtitle: "How EV charging reached 92.3% reliability—and why 1 in 13 charging attempts still fail"
 description: "An analysis of the EV charging industry's 92.3% reliability milestone and the software-driven solutions addressing the #1 pain point for EV drivers."
+image: /assets/images/blog2025-11-5.jpg
 ---
 
-The EV charging industry has reached a pivotal milestone: a **92.3% reliability score** across the U.S. fast-charging network as of Q3 2025, according to Paren's latest State of the Industry Report. This represents meaningful progress—reliability improved from 92.1% in Q2 2025, driven by new station deployments, retirement of poorly maintained legacy sites, and ongoing station refreshes.
+The EV charging industry has reached a pivotal milestone: a **92.3% reliability score** across the U.S. fast-charging network as of Q3 2025, according to Paren's latest State of the Industry Report. This represents meaningful progress, reliability improved from 92.1% in Q2 2025, driven by new station deployments, retirement of poorly maintained legacy sites, and ongoing station refreshes.
 
 But here's the sobering reality: **1 in 13 charging attempts still fails.** For the millions of EV drivers who depend on public charging infrastructure, that 7.7% failure rate remains the #1 pain point preventing widespread EV adoption.
 
-At Rangeway Energy, we believe understanding this threshold—and the software-driven solutions closing the gap—is critical to building the reliable charging network America needs.
+At Rangeway Energy, we believe understanding this threshold, and the software-driven solutions closing the gap, is critical to building the reliable charging network America needs.
 
 ---
 <br>
@@ -29,7 +32,7 @@ This variability underscores a crucial insight: **reliability is less about geog
 
 ### What "First Charge Success Rate" Really Means
 
-The industry has coalesced around "first charge success rate" as the critical metric—measuring whether a driver can successfully charge on the first attempt. This metric matters because it captures the real-world experience: a driver pulls up, plugs in, and either charges successfully or faces frustration.
+The industry has coalesced around "first charge success rate" as the critical metric, measuring whether a driver can successfully charge on the first attempt. This metric matters because it captures the real-world experience: a driver pulls up, plugs in, and either charges successfully or faces frustration.
 
 Federal programs like NEVI have established uptime expectations as standards, but as ChargerHelp's recent report emphasizes, **true reliability requires moving beyond basic uptime metrics to user-centered performance.**
 
@@ -63,7 +66,7 @@ When maintenance teams can't access error codes, system status, and key logs, tr
 
 ## Solution: Software-Driven Approaches to 99% Reliability
 
-The most promising path forward doesn't require reinventing hardware—it requires smarter software and operational practices.
+The most promising path forward doesn't require reinventing hardware, it requires smarter software and operational practices.
 
 ### Implementation: Key Technologies
 
@@ -112,7 +115,7 @@ At Rangeway Energy, we're designing our charging infrastructure with these softw
 - ✅ **Standardized error reporting** (MRECS) for rapid troubleshooting
 - ✅ **Performance-based O&M contracts** that align vendor incentives with uptime
 
-We believe that achieving 99%+ reliability isn't just possible—it's essential for EV adoption at scale.
+We believe that achieving 99%+ reliability isn't just possible, it's essential for EV adoption at scale.
 
 ### Impact on the Industry
 
@@ -135,7 +138,7 @@ As Paren's Q3 report notes:
 
 Charging reliability is more than a technical metric—it's the foundation of EV driver confidence. Every failed charging attempt erodes trust in electric vehicles and slows the transition to sustainable transportation.
 
-But the solutions exist. Software-driven approaches—predictive maintenance, remote diagnostics, standardized protocols, and performance-based contracts—can deliver the 99%+ reliability that EV drivers deserve.
+But the solutions exist. Software-driven approaches, predictive maintenance, remote diagnostics, standardized protocols, and performance-based contracts can deliver the 99%+ reliability that EV drivers deserve.
 
 At Rangeway Energy, we're committed to building that future. Because when charging just works, electric vehicles become the obvious choice.
 
