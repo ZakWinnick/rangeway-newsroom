@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Case Studies
-permalink: /case-studies/
+permalink: /case-studies.html
 ---
 
 <!-- Hero Section -->
@@ -22,19 +22,23 @@ permalink: /case-studies/
     <div class="container">
         <div class="services-grid">
             {% for study in site.case_studies reversed %}
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-chart-line" style="font-size: 2rem;"></i>
+            <a href="{{ study.url | relative_url }}" style="text-decoration: none; color: inherit; display: block;">
+                <div class="service-card">
+                    {% if study.image %}
+                    <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
+                        <img src="{{ study.image | relative_url }}" alt="{{ study.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                    </div>
+                    {% endif %}
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line" style="font-size: 2rem;"></i>
+                    </div>
+                    <h3>{{ study.title }}</h3>
+                    {% if study.subtitle %}
+                    <p style="color: var(--text-secondary); margin-top: 0.5rem;">{{ study.subtitle }}</p>
+                    {% endif %}
+                    <p>{{ study.excerpt | strip_html | truncatewords: 30 }}</p>
                 </div>
-                <h3>{{ study.title }}</h3>
-                {% if study.subtitle %}
-                <p style="color: var(--text-secondary); margin-top: 0.5rem;">{{ study.subtitle }}</p>
-                {% endif %}
-                <p>{{ study.excerpt | strip_html | truncatewords: 30 }}</p>
-                <a href="{{ study.url | relative_url }}" class="card-link">
-                    Read case study <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
+            </a>
             {% endfor %}
 
             {% if site.case_studies.size == 0 %}

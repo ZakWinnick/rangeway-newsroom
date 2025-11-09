@@ -13,6 +13,35 @@ title: Rangeway Energy Newsroom
     </div>
 </section>
 
+<!-- Featured Latest Press Release - Hero Style -->
+{% assign latest_release = site.press_releases | reverse | first %}
+{% if latest_release %}
+<section class="network-map">
+    <div class="container">
+        <div class="network-map-grid">
+            <div class="network-map-content">
+                <span class="location-badge" style="position: relative; z-index: 1; background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 700; box-shadow: 0 4px 16px rgba(240, 144, 96, 0.3); text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 1.5rem;">Latest Press Release</span>
+                <h2 style="position: relative; z-index: 1;"><a href="{{ latest_release.url | relative_url }}" style="color: inherit; text-decoration: none;">{{ latest_release.title }}</a></h2>
+                <p style="color: #F09060; font-weight: 600; margin-bottom: 1rem; position: relative; z-index: 1;">{{ latest_release.date | date: "%B %d, %Y" }}</p>
+                <p style="position: relative; z-index: 1; margin-bottom: 2rem;">{{ latest_release.excerpt | strip_html | truncatewords: 50 }}</p>
+                <div style="position: relative; z-index: 1;">
+                    <a href="{{ latest_release.url | relative_url }}" class="btn-primary" style="background: #F09060; border-color: #F09060; margin-left: 0 !important; margin-right: auto !important;">Read Full Release <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            {% if latest_release.image %}
+            <div class="network-map-image">
+                <img src="{{ latest_release.image | relative_url }}"
+                     alt="{{ latest_release.title }}"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
 <!-- Latest Updates Grid -->
 {% assign latest_release = site.press_releases | reverse | first %}
 {% assign latest_case_study = site.case_studies | reverse | first %}
@@ -28,180 +57,66 @@ title: Rangeway Energy Newsroom
         <div class="services-grid latest-updates-grid">
             <!-- Latest Press Release -->
             {% if latest_release %}
-            <div class="service-card">
-                {% if latest_release.image %}
-                <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
-                    <img src="{{ latest_release.image | relative_url }}" alt="{{ latest_release.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+            <a href="{{ latest_release.url | relative_url }}" style="text-decoration: none; color: inherit; display: block;">
+                <div class="service-card">
+                    {% if latest_release.image %}
+                    <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
+                        <img src="{{ latest_release.image | relative_url }}" alt="{{ latest_release.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                    </div>
+                    {% endif %}
+                    <span class="location-badge" style="background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; width: fit-content; margin-bottom: 1rem; align-self: flex-start;">Latest Press Release</span>
+                    <div class="service-icon">
+                        <i class="fas fa-newspaper" style="font-size: 2rem;"></i>
+                    </div>
+                    <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ latest_release.date | date: "%B %d, %Y" }}</span>
+                    <h3>{{ latest_release.title }}</h3>
+                    <p>{{ latest_release.excerpt | strip_html | truncatewords: 30 }}</p>
                 </div>
-                {% endif %}
-                <span class="location-badge" style="background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; width: fit-content; margin-bottom: 1rem; align-self: flex-start;">Latest Press Release</span>
-                <div class="service-icon">
-                    <i class="fas fa-newspaper" style="font-size: 2rem;"></i>
-                </div>
-                <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ latest_release.date | date: "%B %d, %Y" }}</span>
-                <h3>{{ latest_release.title }}</h3>
-                <p>{{ latest_release.excerpt | strip_html | truncatewords: 30 }}</p>
-                <a href="{{ latest_release.url | relative_url }}" class="card-link">
-                    Read more <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
+            </a>
             {% endif %}
 
             <!-- Latest Case Study -->
             {% if latest_case_study %}
-            <div class="service-card">
-                {% if latest_case_study.image %}
-                <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
-                    <img src="{{ latest_case_study.image | relative_url }}" alt="{{ latest_case_study.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+            <a href="{{ latest_case_study.url | relative_url }}" style="text-decoration: none; color: inherit; display: block;">
+                <div class="service-card">
+                    {% if latest_case_study.image %}
+                    <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
+                        <img src="{{ latest_case_study.image | relative_url }}" alt="{{ latest_case_study.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                    </div>
+                    {% endif %}
+                    <span class="location-badge" style="background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; width: fit-content; margin-bottom: 1rem; align-self: flex-start;">Latest Case Study</span>
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line" style="font-size: 2rem;"></i>
+                    </div>
+                    <h3>{{ latest_case_study.title }}</h3>
+                    {% if latest_case_study.subtitle %}
+                    <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.95rem; margin-bottom: 1rem;">{{ latest_case_study.subtitle }}</p>
+                    {% endif %}
+                    <p>{{ latest_case_study.excerpt | strip_html | truncatewords: 30 }}</p>
                 </div>
-                {% endif %}
-                <span class="location-badge" style="background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; width: fit-content; margin-bottom: 1rem; align-self: flex-start;">Latest Case Study</span>
-                <div class="service-icon">
-                    <i class="fas fa-chart-line" style="font-size: 2rem;"></i>
-                </div>
-                <h3>{{ latest_case_study.title }}</h3>
-                {% if latest_case_study.subtitle %}
-                <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.95rem; margin-bottom: 1rem;">{{ latest_case_study.subtitle }}</p>
-                {% endif %}
-                <p>{{ latest_case_study.excerpt | strip_html | truncatewords: 30 }}</p>
-                <a href="{{ latest_case_study.url | relative_url }}" class="card-link">
-                    Read case study <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
+            </a>
             {% endif %}
 
             <!-- Latest Blog Post -->
             {% if latest_post %}
-            <div class="service-card">
-                {% if latest_post.image %}
-                <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
-                    <img src="{{ latest_post.image | relative_url }}" alt="{{ latest_post.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+            <a href="{{ latest_post.url | relative_url }}" style="text-decoration: none; color: inherit; display: block;">
+                <div class="service-card">
+                    {% if latest_post.image %}
+                    <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
+                        <img src="{{ latest_post.image | relative_url }}" alt="{{ latest_post.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                    </div>
+                    {% endif %}
+                    <span class="location-badge" style="background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; width: fit-content; margin-bottom: 1rem; align-self: flex-start;">Latest Blog Post</span>
+                    <div class="service-icon">
+                        <i class="fas fa-pen" style="font-size: 2rem;"></i>
+                    </div>
+                    <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ latest_post.date | date: "%B %d, %Y" }}</span>
+                    <h3>{{ latest_post.title }}</h3>
+                    <p>{{ latest_post.excerpt | strip_html | truncatewords: 30 }}</p>
                 </div>
-                {% endif %}
-                <span class="location-badge" style="background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; width: fit-content; margin-bottom: 1rem; align-self: flex-start;">Latest Blog Post</span>
-                <div class="service-icon">
-                    <i class="fas fa-pen" style="font-size: 2rem;"></i>
-                </div>
-                <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ latest_post.date | date: "%B %d, %Y" }}</span>
-                <h3>{{ latest_post.title }}</h3>
-                <p>{{ latest_post.excerpt | strip_html | truncatewords: 30 }}</p>
-                <a href="{{ latest_post.url | relative_url }}" class="card-link">
-                    Read more <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
+            </a>
             {% endif %}
         </div>
     </div>
 </section>
 {% endif %}
-
-<!-- Recent Press Releases -->
-<section class="services">
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <h2>Recent Press Releases</h2>
-            <p style="color: var(--text-secondary);">Official announcements and company news</p>
-        </div>
-
-        <div class="services-grid">
-            {% assign counter = 0 %}
-            {% for release in site.press_releases reversed %}
-                {% if counter < 6 %}
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-newspaper" style="font-size: 2rem;"></i>
-                    </div>
-                    <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ release.date | date: "%B %d, %Y" }}</span>
-                    <h3>{{ release.title }}</h3>
-                    <p>{{ release.excerpt | strip_html | truncatewords: 30 }}</p>
-                    <a href="{{ release.url | relative_url }}" class="card-link">
-                        Read more <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                {% assign counter = counter | plus: 1 %}
-                {% endif %}
-            {% endfor %}
-        </div>
-
-        {% if site.press_releases.size > 6 %}
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="{{ '/press/' | relative_url }}" class="btn-primary">
-                View All Press Releases
-            </a>
-        </div>
-        {% endif %}
-    </div>
-</section>
-
-<!-- Recent Case Studies -->
-{% if site.case_studies.size > 0 %}
-<section class="network-map" style="background: var(--bg-secondary);">
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <h2>In-Depth Insights</h2>
-            <p style="color: var(--text-secondary);">Data-driven stories and analysis</p>
-        </div>
-
-        <div class="services-grid">
-            {% assign counter = 0 %}
-            {% for study in site.case_studies reversed %}
-                {% if counter < 3 %}
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line" style="font-size: 2rem;"></i>
-                    </div>
-                    <h3>{{ study.title }}</h3>
-                    {% if study.subtitle %}
-                    <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.95rem;">{{ study.subtitle }}</p>
-                    {% endif %}
-                    <p style="margin-top: 1rem;">{{ study.excerpt | strip_html | truncatewords: 30 }}</p>
-                    <a href="{{ study.url | relative_url }}" class="card-link">
-                        Read case study <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                {% assign counter = counter | plus: 1 %}
-                {% endif %}
-            {% endfor %}
-        </div>
-
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="{{ '/case-studies/' | relative_url }}" class="btn-primary">
-                View All Case Studies
-            </a>
-        </div>
-    </div>
-</section>
-{% endif %}
-
-<!-- Recent Blog Posts -->
-{% if site.posts.size > 0 %}
-<section class="services">
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <h2>Recent Blog Posts</h2>
-            <p style="color: var(--text-secondary);">Company news, insights, and behind-the-scenes</p>
-        </div>
-
-        <div class="services-grid">
-            {% assign counter = 0 %}
-            {% for post in site.posts %}
-                {% if counter < 3 %}
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-pen" style="font-size: 2rem;"></i>
-                    </div>
-                    <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ post.date | date: "%B %d, %Y" }}</span>
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-                    <a href="{{ post.url | relative_url }}" class="card-link">
-                        Read more <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                {% assign counter = counter | plus: 1 %}
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-</section>
-{% endif %}
-
