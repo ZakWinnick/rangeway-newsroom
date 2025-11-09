@@ -1,10 +1,10 @@
-# Rangeway Energy Newsroom (Beta)
+# Rangeway Energy Newsroom
 
-Beta version of the Rangeway Energy newsroom site, featuring the new Rangeway Beta design system. Built with Jekyll and hosted on GitHub Pages.
+Official newsroom for Rangeway Energy, featuring the Rangeway design system. Built with Jekyll and hosted on GitHub Pages.
 
 ## About
 
-This is a **beta version** of the Rangeway Energy newsroom that uses the dark, modern design from beta.rangeway.energy. This site serves as the media center for Rangeway Energy, featuring:
+The Rangeway Energy newsroom serves as the media center for Rangeway Energy, featuring:
 - Press releases
 - Case studies
 - Company blog
@@ -80,17 +80,18 @@ This site is configured for GitHub Pages. Simply push to the main branch and Git
 
 ### Custom Domain Setup
 
-1. In repository settings, add `newsroom-beta.rangeway.energy` as custom domain
+1. In repository settings, add `newsroom.rangeway.energy` as custom domain
 2. Add CNAME record in DNS pointing to your GitHub Pages URL
 3. Enable HTTPS in repository settings
 
 ## Design System
 
-This beta version uses the Rangeway Beta design system with:
-- Dark theme (background: #1a1a1a, #2a2a2a)
-- Poppins font family
-- Coral accent color (#F09060)
-- Modern card-based layouts
+This site uses the Rangeway design system with:
+- Automatic light/dark mode based on user preference
+- Montserrat font for headlines, Source Sans Pro for body text
+- Brand colors: Sunset Coral (#F09060), Golden Highway (#FFB366)
+- Full-color gradient logo
+- Modern card-based layouts with clickable cards
 - Smooth transitions and hover effects
 - Responsive mobile-first design
 
