@@ -95,6 +95,35 @@ title: Rangeway Energy Newsroom
 </section>
 {% endif %}
 
+<!-- Featured Latest Press Release - Hero Style -->
+{% assign latest_release = site.press_releases | reverse | first %}
+{% if latest_release %}
+<section class="network-map">
+    <div class="container">
+        <div class="network-map-grid">
+            <div class="network-map-content">
+                <span class="location-badge" style="position: relative; z-index: 1; background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 700; box-shadow: 0 4px 16px rgba(240, 144, 96, 0.3); text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 1.5rem;">Latest Press Release</span>
+                <h2 style="position: relative; z-index: 1;">{{ latest_release.title }}</h2>
+                <p style="color: #F09060; font-weight: 600; margin-bottom: 1rem; position: relative; z-index: 1;">{{ latest_release.date | date: "%B %d, %Y" }}</p>
+                <p style="position: relative; z-index: 1; margin-bottom: 2rem;">{{ latest_release.excerpt | strip_html | truncatewords: 50 }}</p>
+                <div style="position: relative; z-index: 1;">
+                    <a href="{{ latest_release.url | relative_url }}" class="btn-primary" style="background: #F09060; border-color: #F09060; margin-left: 0 !important; margin-right: auto !important;">Read Full Release <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            {% if latest_release.image %}
+            <div class="network-map-image">
+                <img src="{{ latest_release.image | relative_url }}"
+                     alt="{{ latest_release.title }}"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
 <!-- Recent Press Releases -->
 <section class="services">
     <div class="container">
