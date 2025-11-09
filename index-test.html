@@ -21,7 +21,7 @@ title: Rangeway Energy Newsroom
         <div class="network-map-grid">
             <div class="network-map-content">
                 <span class="location-badge" style="position: relative; z-index: 1; background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 700; box-shadow: 0 4px 16px rgba(240, 144, 96, 0.3); text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 1.5rem;">Latest Press Release</span>
-                <h2 style="position: relative; z-index: 1;">{{ latest_release.title }}</h2>
+                <h2 style="position: relative; z-index: 1;"><a href="{{ latest_release.url | relative_url }}" style="color: inherit; text-decoration: none;">{{ latest_release.title }}</a></h2>
                 <p style="color: #F09060; font-weight: 600; margin-bottom: 1rem; position: relative; z-index: 1;">{{ latest_release.date | date: "%B %d, %Y" }}</p>
                 <p style="position: relative; z-index: 1; margin-bottom: 2rem;">{{ latest_release.excerpt | strip_html | truncatewords: 50 }}</p>
                 <div style="position: relative; z-index: 1;">
