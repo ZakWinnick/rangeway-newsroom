@@ -13,28 +13,81 @@ title: Rangeway Energy Newsroom
     </div>
 </section>
 
-<!-- Latest Press Release -->
+<!-- Latest Updates Grid -->
 {% assign latest_release = site.press_releases | reverse | first %}
-{% if latest_release %}
-<section class="network-map">
+{% assign latest_case_study = site.case_studies | reverse | first %}
+{% assign latest_post = site.posts | first %}
+{% if latest_release or latest_case_study or latest_post %}
+<section class="services">
     <div class="container">
-        <div class="network-map-grid">
-            <div class="network-map-content">
-                <span class="location-badge" style="position: relative; z-index: 1; background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 0.9rem; font-weight: 700; box-shadow: 0 4px 16px rgba(240, 144, 96, 0.3); text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 1.5rem;">Latest Press Release</span>
-                <h2 style="position: relative; z-index: 1;">{{ latest_release.title }}</h2>
-                <p style="color: #F09060; font-weight: 600; margin-bottom: 1rem; position: relative; z-index: 1;">{{ latest_release.date | date: "%B %d, %Y" }}</p>
-                <p style="position: relative; z-index: 1; margin-bottom: 2rem;">{{ latest_release.excerpt | strip_html | truncatewords: 50 }}</p>
-                <div style="position: relative; z-index: 1;">
-                    <a href="{{ latest_release.url | relative_url }}" class="btn-primary" style="background: #F09060; border-color: #F09060; margin-left: 0 !important; margin-right: auto !important;">Read Full Release <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h2>Latest Updates</h2>
+            <p style="color: var(--text-secondary);">Our most recent news across all categories</p>
+        </div>
 
-            {% if latest_release.image %}
-            <div class="network-map-image">
-                <img src="{{ latest_release.image | relative_url }}"
-                     alt="{{ latest_release.title }}"
-                     loading="lazy"
-                     decoding="async">
+        <div class="services-grid latest-updates-grid">
+            <!-- Latest Press Release -->
+            {% if latest_release %}
+            <div class="service-card">
+                {% if latest_release.image %}
+                <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
+                    <img src="{{ latest_release.image | relative_url }}" alt="{{ latest_release.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                </div>
+                {% endif %}
+                <span class="location-badge" style="background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; width: fit-content; margin-bottom: 1rem; align-self: flex-start;">Latest Press Release</span>
+                <div class="service-icon">
+                    <i class="fas fa-newspaper" style="font-size: 2rem;"></i>
+                </div>
+                <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ latest_release.date | date: "%B %d, %Y" }}</span>
+                <h3>{{ latest_release.title }}</h3>
+                <p>{{ latest_release.excerpt | strip_html | truncatewords: 30 }}</p>
+                <a href="{{ latest_release.url | relative_url }}" class="card-link">
+                    Read more <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            {% endif %}
+
+            <!-- Latest Case Study -->
+            {% if latest_case_study %}
+            <div class="service-card">
+                {% if latest_case_study.image %}
+                <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
+                    <img src="{{ latest_case_study.image | relative_url }}" alt="{{ latest_case_study.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                </div>
+                {% endif %}
+                <span class="location-badge" style="background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; width: fit-content; margin-bottom: 1rem; align-self: flex-start;">Latest Case Study</span>
+                <div class="service-icon">
+                    <i class="fas fa-chart-line" style="font-size: 2rem;"></i>
+                </div>
+                <h3>{{ latest_case_study.title }}</h3>
+                {% if latest_case_study.subtitle %}
+                <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.95rem; margin-bottom: 1rem;">{{ latest_case_study.subtitle }}</p>
+                {% endif %}
+                <p>{{ latest_case_study.excerpt | strip_html | truncatewords: 30 }}</p>
+                <a href="{{ latest_case_study.url | relative_url }}" class="card-link">
+                    Read case study <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            {% endif %}
+
+            <!-- Latest Blog Post -->
+            {% if latest_post %}
+            <div class="service-card">
+                {% if latest_post.image %}
+                <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
+                    <img src="{{ latest_post.image | relative_url }}" alt="{{ latest_post.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                </div>
+                {% endif %}
+                <span class="location-badge" style="background: transparent; border: 2px solid #F09060; color: #F09060; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; width: fit-content; margin-bottom: 1rem; align-self: flex-start;">Latest Blog Post</span>
+                <div class="service-icon">
+                    <i class="fas fa-pen" style="font-size: 2rem;"></i>
+                </div>
+                <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ latest_post.date | date: "%B %d, %Y" }}</span>
+                <h3>{{ latest_post.title }}</h3>
+                <p>{{ latest_post.excerpt | strip_html | truncatewords: 30 }}</p>
+                <a href="{{ latest_post.url | relative_url }}" class="card-link">
+                    Read more <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
             {% endif %}
         </div>
@@ -125,7 +178,7 @@ title: Rangeway Energy Newsroom
 <section class="services">
     <div class="container">
         <div style="text-align: center; margin-bottom: 3rem;">
-            <h2>Latest Updates</h2>
+            <h2>Recent Blog Posts</h2>
             <p style="color: var(--text-secondary);">Company news, insights, and behind-the-scenes</p>
         </div>
 
