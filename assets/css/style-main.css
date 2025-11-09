@@ -355,6 +355,18 @@ html {
     section:nth-of-type(odd) {
         background: var(--bg-primary) !important;
     }
+
+    /* Secondary buttons in dark mode - use sunset coral */
+    .btn-secondary {
+        color: var(--sunset-coral) !important;
+        border-color: var(--sunset-coral) !important;
+    }
+
+    .btn-secondary:hover {
+        background: var(--sunset-coral) !important;
+        color: white !important;
+        box-shadow: 0 4px 12px rgba(240, 144, 96, 0.3) !important;
+    }
 }
 
 body {
@@ -436,8 +448,8 @@ p {
 
 .btn-secondary {
     background: transparent;
-    color: var(--sunset-coral);
-    border: 2px solid var(--sunset-coral);
+    color: var(--ocean-deep);
+    border: 2px solid var(--ocean-deep);
     padding: 10px 26px;
     border-radius: 6px;
     font-size: 1rem;
@@ -449,10 +461,10 @@ p {
 }
 
 .btn-secondary:hover {
-    background: var(--sunset-coral);
+    background: var(--ocean-deep);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(240, 144, 96, 0.3);
+    box-shadow: 0 4px 12px rgba(44, 95, 124, 0.3);
 }
 
 .btn-large {
