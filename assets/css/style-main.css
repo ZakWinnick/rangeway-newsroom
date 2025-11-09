@@ -69,24 +69,29 @@ html {
 /* Dark Mode - Automatic based on system preference */
 @media (prefers-color-scheme: dark) {
     :root {
-        /* Application Colors - Dark Mode */
+        /* Application Colors - Dark Mode with Enhanced Color Palette */
         --bg-primary: #1a1a1a;
-        --bg-secondary: #2a2a2a;
+        --bg-secondary: #1e2831; /* Dark ocean blue tint */
         --text-primary: #e0e0e0;
         --text-secondary: #b0b0b0;
         --text-heading: #f5f5f5;
-        --card-bg: #2a2a2a;
-        --border-color: #444;
+        --card-bg: #252d35; /* Subtle blue-gray */
+        --border-color: #3a4854; /* Slightly blue-tinted border */
         --shadow-light: rgba(0,0,0,0.3);
         --shadow-medium: rgba(0,0,0,0.4);
         --shadow-heavy: rgba(0,0,0,0.5);
         --accent-color: #F09060;
         --accent-hover: #FFB366;
-        --nav-bg: #2a2a2a;
-        --footer-bg: #0f0f0f;
+        --nav-bg: #1e2428; /* Slightly warmer dark */
+        --footer-bg: #151a1f; /* Dark blue-gray */
         --footer-text: #F5DEB3;
-        --stats-bg: #0f0f0f;
+        --stats-bg: #1a2229; /* Dark with subtle blue */
         --coastal-cream: #2a2a2a;
+
+        /* Enhanced dark mode colors */
+        --dark-ocean: #1a2a35; /* Deep ocean blue for alternating sections */
+        --dark-coral-tint: rgba(240, 144, 96, 0.08); /* Very subtle coral overlay */
+        --dark-gold-tint: rgba(255, 179, 102, 0.08); /* Very subtle gold overlay */
     }
 
     /* Ensure body text is visible in dark mode */
@@ -282,6 +287,73 @@ html {
 
     .contact-phone {
         color: var(--coastal-cream) !important;
+    }
+
+    /* Enhanced section backgrounds with subtle color */
+    .services {
+        background: linear-gradient(135deg, var(--bg-primary) 0%, var(--dark-ocean) 100%) !important;
+    }
+
+    .network-map {
+        background: linear-gradient(135deg, var(--dark-ocean) 0%, #1e2a31 100%) !important;
+    }
+
+    /* Card enhancements with subtle colored borders */
+    .service-card {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--sunset-coral) 0%, var(--golden-highway) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .service-card:hover::before {
+        opacity: 1;
+    }
+
+    .service-card:hover {
+        border-color: rgba(240, 144, 96, 0.3) !important;
+        box-shadow: 0 8px 30px rgba(240, 144, 96, 0.1) !important;
+    }
+
+    /* Hero section with subtle gradient */
+    .hero {
+        background: linear-gradient(180deg, var(--bg-primary) 0%, var(--dark-ocean) 100%) !important;
+    }
+
+    /* Network map cards with enhanced styling */
+    .network-map-content {
+        background: var(--dark-coral-tint);
+        padding: 2rem;
+        border-radius: 8px;
+    }
+
+    /* Stats section with subtle color */
+    .stats-grid {
+        background: var(--stats-bg);
+        padding: 3rem;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+    }
+
+    /* Alternating section colors for visual interest */
+    section:nth-of-type(even) {
+        background: var(--bg-secondary) !important;
+    }
+
+    section:nth-of-type(odd) {
+        background: var(--bg-primary) !important;
     }
 }
 
