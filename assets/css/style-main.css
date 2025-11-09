@@ -653,6 +653,16 @@ p {
     gap: 2rem;
 }
 
+.latest-updates-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+}
+
+.latest-updates-grid .service-card {
+    width: 100%;
+    max-width: 400px;
+}
+
 .service-card {
     background: var(--card-bg);
     padding: 2.5rem;
