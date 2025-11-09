@@ -436,8 +436,8 @@ p {
 
 .btn-secondary {
     background: transparent;
-    color: var(--ocean-deep);
-    border: 2px solid var(--ocean-deep);
+    color: var(--sunset-coral);
+    border: 2px solid var(--sunset-coral);
     padding: 10px 26px;
     border-radius: 6px;
     font-size: 1rem;
@@ -449,10 +449,10 @@ p {
 }
 
 .btn-secondary:hover {
-    background: var(--ocean-deep);
+    background: var(--sunset-coral);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(44, 95, 124, 0.3);
+    box-shadow: 0 4px 12px rgba(240, 144, 96, 0.3);
 }
 
 .btn-large {
