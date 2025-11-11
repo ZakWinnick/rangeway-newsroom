@@ -14,7 +14,7 @@ title: Rangeway Energy Newsroom
 </section>
 
 <!-- Featured Latest Press Release - Hero Style -->
-{% assign latest_release = site.press_releases | reverse | first %}
+{% assign latest_release = site.press_releases | where_exp: "release", "release.date <= site.time" | reverse | first %}
 {% if latest_release %}
 <section class="network-map">
     <div class="container">
@@ -43,7 +43,7 @@ title: Rangeway Energy Newsroom
 {% endif %}
 
 <!-- Latest Updates Grid -->
-{% assign latest_release = site.press_releases | reverse | first %}
+{% assign latest_release = site.press_releases | where_exp: "release", "release.date <= site.time" | reverse | first %}
 {% assign latest_case_study = site.case_studies | reverse | first %}
 {% assign latest_post = site.posts | first %}
 {% if latest_release or latest_case_study or latest_post %}
