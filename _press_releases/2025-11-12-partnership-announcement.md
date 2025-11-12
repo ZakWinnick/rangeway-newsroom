@@ -7,11 +7,11 @@ image: /assets/images/partners1.jpg
 ---
 
 **SAN FRANCISCO, CA – November 12, 2025** – Today, Rangeway Energy, a premium EV charging network for America's scenic highways, has announced strategic partnerships with three technology providers: ChargeMate (AI-powered driver support), WattsUp (predictive uptime monitoring), and HyWatts (modular renewable power systems). These partnerships strengthen Rangeway's ability to deliver hospitality-grade charging experiences across challenging corridor environments.
-
-<img src="/assets/images/partners1.jpg" alt="Rangeway Energy Partners Logos" style="max-width: 100%; height: auto; border-radius: var(--radius-md); margin: 2rem 0;">
 <br>
 <br>
 "Charging shouldn't be a chore - it should be part of the journey," said Zak Winnick, Founder and CEO of Rangeway Energy. "These partnerships bring together the technologies we need to deliver on that promise: AI that helps drivers before they even realize they need it, monitoring that keeps chargers online before problems arise, and power systems that let us serve scenic destinations other networks can't reach."
+
+<img src="/assets/images/partners1.jpg" alt="Rangeway Energy Partners Logos" style="max-width: 100%; height: auto; border-radius: var(--radius-md); margin: 2rem 0;">
 
 **[ChargeMate](https://chargemate.ai)** provides 24/7 AI-powered driver assistance, resolving 87-93% of charging session issues without human escalation. The platform integrates with Rangeway's NOC teams, enabling seamless handoff for complex issues while reducing the burden on hub staff. "If I were building a fast charging network today, I'd want it to look like Rangeway Energy," said Brad Crist, CEO & Co-founder of ChargeMate AI, Inc. "They've thought through every detail of the driver experience, and we're proud to partner with Zak and team to deliver a seamless charging experience for all."
 
