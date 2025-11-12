@@ -8,13 +8,10 @@ image: /assets/images/partners1.jpg
 
 <img src="/assets/images/partners1.jpg" alt="Rangeway Energy Partners Logos" style="max-width: 100%; height: auto; border-radius: var(--radius-md); margin: 2rem 0;">
 
-**SAN FRANCISCO, CA – November 12, 2025** – Rangeway Energy, a premium EV charging network for America's scenic highways, today announced strategic partnerships with three technology providers: ChargeMate (AI-powered driver support), WattsUp (predictive uptime monitoring), and HyWatts (modular renewable power systems). These partnerships strengthen Rangeway's ability to deliver hospitality-grade charging experiences across challenging corridor environments.
+**SAN FRANCISCO, CA – November 12, 2025** – Today, Rangeway Energy, a premium EV charging network for America's scenic highways, has announced strategic partnerships with three technology providers: ChargeMate (AI-powered driver support), WattsUp (predictive uptime monitoring), and HyWatts (modular renewable power systems). These partnerships strengthen Rangeway's ability to deliver hospitality-grade charging experiences across challenging corridor environments.
+<br>
 <br>
 "Charging shouldn't be a chore - it should be part of the journey," said Zak Winnick, Founder and CEO of Rangeway Energy. "These partnerships bring together the technologies we need to deliver on that promise: AI that helps drivers before they even realize they need it, monitoring that keeps chargers online before problems arise, and power systems that let us serve scenic destinations other networks can't reach."
-
-## **Building Reliability Through Technology**
-
-Rangeway operates through regional Basecamp hubs (café service, premium lounges, 24/7 Network Operations Centers) paired with unmanned Waystation satellites. Each hub supports 3-4 satellites through shared monitoring, maintenance, and parts inventory.
 
 **[ChargeMate](https://chargemate.ai)** provides 24/7 AI-powered driver assistance, resolving 87-93% of charging session issues without human escalation. The platform integrates with Rangeway's NOC teams, enabling seamless handoff for complex issues while reducing the burden on hub staff. "If I were building a fast charging network today, I'd want it to look like Rangeway Energy," said Brad Crist, CEO & Co-founder of ChargeMate AI, Inc. "They've thought through every detail of the driver experience, and we're proud to partner with Zak and team to deliver a seamless charging experience for all."
 
@@ -22,19 +19,13 @@ Rangeway operates through regional Basecamp hubs (café service, premium lounges
 
 **[HyWatts](https://hywatts.com)** provides modular Power-Plant-in-a-Box™ systems that integrate solar generation, advanced battery storage, and hydrogen-ready power modules. These turnkey solutions enable Rangeway to serve grid-constrained locations where traditional charging infrastructure would be impractical. "HyWatts is excited to partner with Rangeway to open up the beauty of America to EVs like never before by combining distributed energy with world class hospitality and convenience," said Sam Ruben, Co-founder/Chief Business Development Officer, HyWatts. "There are incredible destinations along scenic corridors that lack the grid infrastructure for reliable fast charging. HyWatts changes that equation," added Winnick.
 
-## **Validation Ahead of Pre-Seed Funding**
-
-The partnerships come as Rangeway actively seeks investors for its Pre-Seed funding round, with Phase 1 site acquisition progressing toward final close.
-
-"These aren't just vendor relationships - they're strategic partnerships with companies that understand our mission," said Winnick. "Each partner brings proven technology that's been validated in the field, and each shares our commitment to building infrastructure that serves drivers, not just vehicles."
-
 ## **What's Next**
 
-Currently seeking Pre-Seed investors, Rangeway has assembled the technology partnerships needed to deploy its first hub and satellite cluster, connecting travelers to iconic destinations where charging infrastructure has historically been unreliable or absent. The company is finalizing its flagship Basecamp location while building partnerships with site hosts across key scenic routes.
+Currently seeking Pre-Seed investors, Rangeway has assembled the technology partnerships needed to deploy its first hub and satellite cluster, connecting travelers to iconic destinations where charging infrastructure has historically been unreliable or absent. The company is finalizing its flagship Basecamp location while building partnerships with site hosts across key strategic routes.
 
 ## **About Rangeway Energy**
 
-Rangeway Energy is building a premium EV charging network where infrastructure meets hospitality along America's scenic corridors. The company serves adventure travelers and road-trippers who expect the same level of thoughtfulness from charging infrastructure that they find at the best roadside stops. By focusing exclusively on tourism routes and gateway communities, Rangeway fills a critical gap left by networks that prioritize urban and interstate corridors. For more information, visit rangeway.energy.
+Rangeway Energy is building a premium EV charging network where infrastructure meets hospitality. The company serves adventure travelers and road-trippers who expect the same level of thoughtfulness from charging infrastructure that they find at the best roadside stops. By focusing exclusively on tourism routes and gateway communities, Rangeway fills a critical gap left by networks that prioritize urban and interstate corridors. For more information, visit rangeway.energy.
 
 ## **Media Contact**
 
