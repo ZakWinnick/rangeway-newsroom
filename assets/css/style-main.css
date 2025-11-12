@@ -1244,21 +1244,21 @@ p {
 .blog-content a,
 .press-release-content a,
 .case-study-content a {
-    color: var(--sunset-coral);
-    text-decoration: underline;
+    color: var(--sunset-coral) !important;
+    text-decoration: underline !important;
     transition: color 0.3s ease;
 }
 
 .blog-content a:visited,
 .press-release-content a:visited,
 .case-study-content a:visited {
-    color: var(--text-primary);
+    color: var(--text-primary) !important;
 }
 
 .blog-content a:hover,
 .press-release-content a:hover,
 .case-study-content a:hover {
-    color: var(--accent-hover);
+    color: var(--accent-hover) !important;
 }
 
 /* Responsive Design */
