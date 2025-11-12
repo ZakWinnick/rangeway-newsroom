@@ -1,0 +1,50 @@
+---
+layout: none
+---
+{
+  {%- comment -%}
+  Find the latest item across all content types (press releases, case studies, blog posts)
+  {%- endcomment -%}
+
+  {%- assign all_items = "" | split: "" -%}
+
+  {%- comment -%}Add press releases{%- endcomment -%}
+  {%- for item in site.press_releases -%}
+    {%- if item.date <= site.time -%}
+      {%- assign all_items = all_items | push: item -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- comment -%}Add case studies{%- endcomment -%}
+  {%- for item in site.case_studies -%}
+    {%- assign all_items = all_items | push: item -%}
+  {%- endfor -%}
+
+  {%- comment -%}Add blog posts{%- endcomment -%}
+  {%- for item in site.posts -%}
+    {%- assign all_items = all_items | push: item -%}
+  {%- endfor -%}
+
+  {%- comment -%}Sort by date and get the most recent{%- endcomment -%}
+  {%- assign sorted_items = all_items | sort: "date" | reverse -%}
+  {%- assign latest = sorted_items | first -%}
+
+  {%- if latest -%}
+  {%- comment -%}Determine content type{%- endcomment -%}
+  {%- if latest.layout == "press-release" -%}
+    {%- assign content_type = "Press Release" -%}
+  {%- elsif latest.layout == "case-study" -%}
+    {%- assign content_type = "Case Study" -%}
+  {%- else -%}
+    {%- assign content_type = "Blog Post" -%}
+  {%- endif -%}
+
+  "title": {{ latest.title | jsonify }},
+  "date": "{{ latest.date | date: '%Y-%m-%d' }}",
+  "dateFormatted": "{{ latest.date | date: '%B %d, %Y' }}",
+  "type": "{{ content_type }}",
+  "url": "{{ site.url }}{{ latest.url }}",
+  "excerpt": {{ latest.excerpt | strip_html | strip_newlines | truncatewords: 30 | jsonify }},
+  "image": {% if latest.image %}"{{ site.url }}{{ latest.image }}"{% else %}null{% endif %}
+  {%- endif -%}
+}
