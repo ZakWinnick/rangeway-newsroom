@@ -98,7 +98,7 @@ Numbered lists:
 
 ## Adding Links
 
-[Link to main site](https://rangeway.energy)
+[Link to main site](https://rangewayev.com)
 
 ## Adding Images
 
@@ -110,7 +110,7 @@ Numbered lists:
 
 ---
 
-*Want to stay updated? Subscribe to our [Field Notes newsletter](https://fieldnotes.rangeway.energy).*
+*Want to stay updated? Subscribe to our [Field Notes newsletter](https://fieldnotes.rangewayev.com).*
 ```
 
 **Example filename:** `2024-11-15-construction-update-baker.md`
@@ -338,8 +338,8 @@ git push origin main
 
 ### Links
 ```markdown
-[Link text](https://rangeway.energy)
-[Link with title](https://rangeway.energy "Rangeway Energy Homepage")
+[Link text](https://rangewayev.copm)
+[Link with title](https://rangewayev.com "Rangeway Homepage")
 ```
 
 ### Images
@@ -484,7 +484,7 @@ Check these files in the repo for reference:
 - Or use a separate branch and merge when ready
 
 ### Contact
-For questions about the newsroom site: **media@rangeway.energy**
+For questions about the newsroom site: **media@rangewayev.com**
 
 ---
 

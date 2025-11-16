@@ -1,10 +1,10 @@
 # Rangeway Energy Newsroom
 
-Official newsroom for Rangeway Energy, featuring the Rangeway design system. Built with Jekyll and hosted on GitHub Pages.
+Official newsroom for Rangeway, featuring the Rangeway design system. Built with Jekyll and hosted on GitHub Pages.
 
 ## About
 
-The Rangeway Energy newsroom serves as the media center for Rangeway Energy, featuring:
+The Rangeway newsroom serves as the media center for Rangeway Energy, featuring:
 - Press releases
 - Case studies
 - Company blog
@@ -115,8 +115,8 @@ rangeway-newsroom/
 
 ## Brand Consistency
 
-This site uses the same design system as the main Rangeway Energy site (rangeway.energy), ensuring brand consistency across all properties.
+This site uses the same design system as the main Rangeway site (rangewayev.com), ensuring brand consistency across all properties.
 
 ## Contact
 
-For questions about this site, contact: media@rangeway.energy
+For questions about this site, contact: media@rangewayev.com
