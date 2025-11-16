@@ -12,16 +12,16 @@ asset_version: "2.2"
 organization:
   name: Rangeway Energy
   tagline: "Indoor Comfort. Every Stop."
-  main_site: "https://rangeway.energy"
-  email: media@rangeway.energy
+  main_site: "https://rangewayev.com"
+  email: media@rangewayev.com
   phone: "(650) 420-6300"
 
 # Social media
 social:
-  twitter: "https://x.com/rangewayenergy"
-  instagram: "https://instagram.com/rangewayenergy"
+  twitter: "https://x.com/rangewayev"
+  instagram: "https://instagram.com/rangewayev"
   linkedin: "https://linkedin.com/company/rangewayenergy"
-  youtube: "https://youtube.com/@rangewayenergy"
+  youtube: "https://youtube.com/@rangewayev"
 
 # Analytics
 analytics:
