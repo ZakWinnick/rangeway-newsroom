@@ -12,12 +12,14 @@ layout: null
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% for study in site.case_studies reversed limit:20 %}
+      {% assign study_date = study.date | default: site.time %}
+      {% if study_date <= site.time %}
       <item>
         <title>{{ study.title | xml_escape }}</title>
         <description>{{ study.content | xml_escape }}</description>
-        <pubDate>{{ study.date | default: site.time | date_to_rfc822 }}</pubDate>
+        <pubDate>{{ study_date | date_to_rfc822 }}</pubDate>
         <link>{{ site.url }}{{ study.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ study.url }}</guid>
+        <guid isPermaLink="true">{{ study.url }}</guid>
         {% if study.subtitle %}
         <category>{{ study.subtitle | xml_escape }}</category>
         {% endif %}
@@ -25,6 +27,7 @@ layout: null
         <enclosure url="{{ site.url }}{{ study.image }}" type="image/jpeg" />
         {% endif %}
       </item>
+      {% endif %}
     {% endfor %}
   </channel>
 </rss>

@@ -12,6 +12,7 @@ layout: none
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
 
     {% for post in site.posts limit:20 %}
+    {% if post.date <= site.time %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
       <description>{{ post.excerpt | strip_html | xml_escape }}</description>
@@ -26,6 +27,7 @@ layout: none
       <enclosure url="{{ site.url }}{{ post.image }}" type="image/jpeg" />
       {% endif %}
     </item>
+    {% endif %}
     {% endfor %}
 
   </channel>

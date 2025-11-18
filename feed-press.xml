@@ -12,6 +12,7 @@ layout: null
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% for release in site.press_releases reversed limit:20 %}
+      {% if release.date <= site.time %}
       <item>
         <title>{{ release.title | xml_escape }}</title>
         <description>{{ release.content | xml_escape }}</description>
@@ -25,6 +26,7 @@ layout: null
         <enclosure url="{{ site.url }}{{ release.image }}" type="image/jpeg" />
         {% endif %}
       </item>
+      {% endif %}
     {% endfor %}
   </channel>
 </rss>
